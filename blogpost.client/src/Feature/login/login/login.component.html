@@ -1,0 +1,74 @@
+<div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-header text-center">
+            <h3>Login</h3>
+          </div>
+          <div class="card-body">
+            <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
+              <div class="form-group mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input 
+                  type="email" 
+                  id="email" 
+                  name="Email" 
+                  [(ngModel)]="UserLogin.Email" 
+                  #Email="ngModel"
+                  required 
+                  class="form-control" 
+                  placeholder="Enter your email" 
+                />
+                <div *ngIf="Email.invalid && Email.touched" class="text-danger">
+                  Email is required
+                </div>
+              </div>
+  
+              <div class="form-group mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input 
+                  type="password" 
+                  id="password" 
+                  name="Pwd" 
+                  [(ngModel)]="UserLogin.Pwd" 
+                  #Pwd="ngModel"
+                  required 
+                  class="form-control" 
+                  placeholder="Enter password" 
+                />
+                <div *ngIf="Pwd.invalid && Pwd.touched" class="text-danger">
+                  Password is required
+                </div>
+              </div>
+  
+              
+  
+              <div class="d-grid gap-2">
+                <button type="submit" class="btn btn-primary" [disabled]="loginForm.invalid">
+                  <i class="bi bi-box-arrow-in-right"></i> Login
+                </button>
+              </div>
+            </form>
+  
+            <div class="text-end mb-3">
+              <a routerLink="/forgot-password">Forgot Password?</a>
+            </div>
+  
+            <div class="text-center mt-4">
+              <button class="btn btn-outline-danger me-2" aria-label="Login with Google">
+                <i class="bi bi-google"></i>
+              </button>
+              <button class="btn btn-outline-primary" (click)="loginWithFacebook()" aria-label="Login with Facebook">
+                <i class="bi bi-facebook"></i>
+              </button>
+            </div>
+  
+            <div class="text-center mt-3">
+              <p>Don't have an account? <a routerLink="/signup">Register here</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

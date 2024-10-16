@@ -1,0 +1,2 @@
+D:\NNNN\Doc\BlogPost\blogpost.client\obj\Debug\blogpost.client.esproj.CoreCompileInputs.cache
+C:\Users\hp\Downloads\BlogPost-master\blogpost.client\obj\Debug\blogpost.client.esproj.CoreCompileInputs.cache

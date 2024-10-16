@@ -1,0 +1,24 @@
+{
+  "Version": 1,
+  "Hash": "chZQvhTAvgrsCfdrxkvgrNBtApLyDsCrZbXPxPrN/oE=",
+  "Source": "BlogPost.Server",
+  "BasePath": "_content/BlogPost.Server",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [
+    {
+      "Identity": "C:\\Users\\hp\\Downloads\\BlogPost-master\\blogpost.client\\blogpost.client.esproj",
+      "Version": 2,
+      "Source": "blogpost.client",
+      "GetPublishAssetsTargets": "GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier;SelfContained",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier;SelfContained"
+    }
+  ],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

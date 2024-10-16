@@ -1,0 +1,39 @@
+/* Login form card styling */
+.card {
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Header alignment */
+  .card-header {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+  }
+  
+  /* Form control styling */
+  .form-control {
+    border-radius: 5px;
+  }
+  
+  /* Button spacing */
+  .d-grid button {
+    font-size: 16px;
+    padding: 10px;
+  }
+  
+  /* Error message styling */
+  .text-danger {
+    font-size: 12px;
+  }
+  
+  /* Social buttons spacing */
+  .me-2 {
+    margin-right: 10px;
+  }
+  
+  /* Alert box for error messages */
+  .alert {
+    margin-top: 10px;
+  }
+  
