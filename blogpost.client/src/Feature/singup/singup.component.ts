@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm  } from '@angular/forms';
 import { SingupService } from '../../Core/Services/singup.service';
+import { Router } from '@angular/router';
 
 
 
@@ -15,7 +16,7 @@ export class SingupComponent    implements OnInit{
 ngOnInit(): void {
     
 }
-constructor(private singupService:SingupService)
+constructor(private singupService:SingupService, private router: Router)
 {
 
 }
@@ -38,7 +39,7 @@ formData: SingupUser = {
   firstname: '',
   lastname: '',
   email: '',
-  phone: '',
+  Mobile: '',
   gender: '',
   pwd: '',
   rpwd: ''
@@ -64,7 +65,7 @@ registerFormSubmit(form: NgForm) {
 
         setTimeout(() => {
           this.successMessageVisible = false;
-         
+          this.router.navigate(['/login']);
          
         }, 3000);
       },
@@ -75,7 +76,7 @@ registerFormSubmit(form: NgForm) {
 
     form.reset(); 
     this.formData = { firstname: '',  lastname: '', email: '',
-    phone: '',
+    Mobile: '',
     gender: '',
     pwd: '',
     rpwd: '' }; 

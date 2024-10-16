@@ -3,7 +3,7 @@ export interface SingupUser {
   firstname: string;
   lastname: string;
   email: string;
-  phone: string;
+  Mobile: string;
   gender: string; 
   pwd: string;
   rpwd?: string;
@@ -12,11 +12,7 @@ export interface SingupUser {
 
 
 
-    // username: string;
-    // email: string;
-    // password: string;
-    // confirmPassword?: string; 
-
+    
 
 
 
