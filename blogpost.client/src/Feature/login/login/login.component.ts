@@ -1,31 +1,31 @@
-import { Component } from '@angular/core';
+import { Component ,OnInit} from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { loginModel } from '../../../Core/Model/loginModel';
 import { SingupService } from '../../../Core/Services/singup.service';
+import { AuthServiceService } from '../../../Core/Services/auth-service.service';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })
-export class LoginComponent {
+export class LoginComponent implements OnInit {
 
 
+  ngOnInit() {
+    
+  }
 
-
- 
-  
   UserLogin: loginModel = {
     Email: '',
     Pwd: ''
   };
 
-  
   isUserValid: boolean = false;
   loginError: string | null = null;
 
-  constructor(private userlogin: SingupService, private router: Router) {}
+  constructor(private userlogin: SingupService, private router: Router, private authService:AuthServiceService) {}
 
 
   loginWithFacebook() {
@@ -45,8 +45,14 @@ export class LoginComponent {
             
            
             localStorage.setItem('authToken', res.token);
-            this.router.navigate(['/home']);
-          } else {
+            this.authService.setLoginStatus(true); // login status
+            this.router.navigate(['/home']).then(() => {
+              window.location.reload(); // Reload to reflect login status in navbar
+            });
+            
+          }
+          
+          else {
             this.isUserValid = false;
             this.loginError = 'Login Unsuccessful. Please check your credentials.';
             console.log('Login Unsuccessful');
@@ -62,6 +68,9 @@ export class LoginComponent {
       this.loginError = 'Please fill in all fields.';
     }
   }
+ 
+
+  
 }
 
 

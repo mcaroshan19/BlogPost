@@ -63,8 +63,8 @@
       <div class="row mb-3">
         <div class="col">
           <label for="Phone" class="form-label mb-3">Phone Number</label>
-          <input type="tel" class="form-control" id="Phone" name="Mobile" #phone="ngModel" [(ngModel)]="formData.Mobile" required minlength="10" maxlength="10" pattern="^[0-9]*$">
-          <div *ngIf="Mobile?.invalid && (phone?.dirty || Mobile?.touched)" class="text-danger">
+          <input type="tel" class="form-control" id="Phone" name="Mobile" #Mobile="ngModel" [(ngModel)]="formData.Mobile" required minlength="10" maxlength="10" pattern="^[0-9]*$">
+          <div *ngIf="Mobile?.invalid && (Mobile?.dirty || Mobile?.touched)" class="text-danger">
             <div *ngIf="Mobile?.errors?.['required']">Phone number is required.</div>
             <div *ngIf="Mobile?.errors?.['minlength']">Number should be 10 digits.</div>
             <div *ngIf="Mobile?.errors?.['maxlength']">Number is too long.</div>
