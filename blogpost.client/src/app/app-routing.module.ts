@@ -8,6 +8,7 @@ import { ListCategoryComponent } from '../Feature/list-category/list-category.co
 import { EditComponent } from '../Feature/edit/edit.component';
 import { SingupComponent } from '../Feature/singup/singup.component';
 import { LoginComponent } from '../Feature/login/login/login.component';
+import { authGuard } from '../Core/Authgard/auth.guard';
 
 
 const routes: Routes = [
@@ -15,20 +16,24 @@ const routes: Routes = [
   
   {
     path: 'List',
-    component: ListCategoryComponent
+    component: ListCategoryComponent,
+    canActivate: [authGuard] 
   
   }, 
   {
     path:'My' ,
     component: MyComponentComponent,
+    canActivate: [authGuard] 
   },
   {
     path:'add-category',
-    component: AddCategoryComponent, title:'Edit'
+    component: AddCategoryComponent, title:'Edit',
+    canActivate: [authGuard] 
   },
   {
     path:'home' ,
-    component: HomeComponent
+    component: HomeComponent,
+    canActivate: [authGuard] 
   },
   {
     path:'edit' ,
