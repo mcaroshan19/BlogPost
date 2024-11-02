@@ -1,0 +1,132 @@
+
+
+
+
+
+
+
+  <div class="container">
+    
+    <form #registerForm="ngForm" (ngSubmit)="registerFormSubmit(registerForm)" class="border p-3 rounded-3">
+      <div *ngIf="successMessageVisible" class="alert alert-success">
+        Form successfully submitted!
+      </div>
+      
+      <div class="row g-0">
+        <div class="col text-center p-2 mb-3 bg-light">
+          <span class="fs-3">Register</span>
+        </div>
+      </div>
+    
+  
+      <div class="row mb-3">
+        <div class="col">
+          <label for="Firstname" class="form-label">First Name</label>
+          <input type="text" class="form-control" id="Firstname" name="firstname" #firstname="ngModel"  [(ngModel)]="formData.firstname"  required minlength="2" pattern="^[a-zA-Z ]*$">
+          <div *ngIf="firstname?.invalid && (firstname?.dirty || firstname?.touched)" class="text-danger">
+            <div *ngIf="firstname?.errors?.['required']">First name is required.</div>
+            <div *ngIf="firstname?.errors?.['minlength']">First name must be at least 2 characters long.</div>
+            <div *ngIf="firstname?.errors?.['pattern']">First name must contain only letters.</div>
+          </div>
+        </div>
+        <div class="col">
+          <label for="Lastname" class="form-label">Last Name</label>
+          <input type="text" class="form-control" id="Lastname" name="lastname" #lastname="ngModel" [(ngModel)]="formData.lastname" required minlength="2" pattern="^[a-zA-Z ]*$">
+          <div *ngIf="lastname?.invalid && (lastname?.dirty || lastname?.touched)" class="text-danger">
+            <div *ngIf="lastname?.errors?.['required']">Last name is required.</div>
+            <div *ngIf="lastname?.errors?.['minlength']">Last name must be at least 2 characters long.</div>
+            <div *ngIf="lastname?.errors?.['pattern']">Last name must contain only letters.</div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="row mb-3">
+        <div class="col">
+          <label for="Email" class="form-label">Email Address</label>
+          <input type="email" 
+                 class="form-control" 
+                 id="Email" 
+                 name="email" 
+                 #email="ngModel"  
+                 [(ngModel)]="formData.email" 
+                 required 
+                 pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$">
+          <div *ngIf="email?.invalid && (email?.dirty || email?.touched)" class="text-danger">
+            <div *ngIf="email?.errors?.['required']">Email is required.</div>
+            <div *ngIf="email?.errors?.['email']">A valid email is required.</div>
+            <div *ngIf="email?.errors?.['pattern']">Email format is invalid.</div>
+          </div>
+        </div>
+      </div>
+      
+  
+      <div class="row mb-3">
+        <div class="col">
+          <label for="Phone" class="form-label mb-3">Phone Number</label>
+          <input type="tel" class="form-control" id="Phone" name="Mobile" #Mobile="ngModel" [(ngModel)]="formData.Mobile" required minlength="10" maxlength="10" pattern="^[0-9]*$">
+          <div *ngIf="Mobile?.invalid && (Mobile?.dirty || Mobile?.touched)" class="text-danger">
+            <div *ngIf="Mobile?.errors?.['required']">Phone number is required.</div>
+            <div *ngIf="Mobile?.errors?.['minlength']">Number should be 10 digits.</div>
+            <div *ngIf="Mobile?.errors?.['maxlength']">Number is too long.</div>
+            <div *ngIf="Mobile?.errors?.['pattern']">Phone number must contain only digits.</div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="row mb-2">
+        <label class="col-md-2 col-form-label font-weight-bold">Gender</label>
+        <div class="col mt-1">
+          <div class="form-check form-check-inline">
+            <input type="radio" class="form-check-input" value="m" id="male" name="gender" #gender="ngModel" [(ngModel)]="formData.gender" required>
+            <label for="male" class="form-check-label">Male</label>
+            <div *ngIf="gender?.invalid && (gender?.dirty || gender?.touched)" class="text-danger">
+              <div *ngIf="gender?.errors?.['required']">Select the gender..</div>
+             
+            </div>
+          </div>
+          <div class="form-check form-check-inline">
+            <input type="radio" class="form-check-input" value="f" id="female" name="gender" #gender="ngModel" [(ngModel)]="formData.gender">
+            <label for="female" class="form-check-label">Female</label>
+            <div *ngIf="gender?.invalid && (gender?.dirty || gender?.touched)" class="text-danger">
+              <div *ngIf="gender?.errors?.['required']">Select the gender..</div>
+             
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="row mb-3">
+        <div class="col">
+          <label for="Password" class="form-label">Password</label>
+          <input type="password" class="form-control" id="Password" [type]="passwordFieldType" name="pwd" #pwd="ngModel" [(ngModel)]="formData.pwd" required minlength="6">
+          
+        </div>
+  
+        <div class="col">
+          <label for="RPassword" class="form-label">Repeat Password</label>
+          <input type="password" class="form-control" id="RPassword" name="rpwd" [type]="confirmPasswordFieldType" #rpwd="ngModel" [(ngModel)]="formData.rpwd" required minlength="6">
+         
+        </div>
+      </div>
+      
+      <!-- Password Mismatch Error -->
+      <div *ngIf="pwd.value !== rpwd.value && (pwd.dirty || rpwd.dirty)" class="text-danger">
+        Passwords do not match.
+      </div>
+  
+      <div class="row">
+        <div class="col-6 offset-3">
+          <div class="d-grid">
+            <button type="submit" class="btn btn-primary" [disabled]="registerForm.invalid || passwordMismatch" >Register</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  
+
+
+
+
+  
+  

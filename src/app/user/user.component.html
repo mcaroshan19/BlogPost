@@ -1,0 +1,101 @@
+<div class="container mt-4">
+
+  <div class="d-flex justify-content-around mb-3">
+    <div *ngFor="let step of steps; let i = index">
+      <input
+        type="radio"
+        class="btn-check"
+        name="step"
+        [id]="'step-' + i"
+        [checked]="currentStep === i"
+        (change)="goToStep(i)"
+      />
+      <label class="btn btn-outline-primary" [for]="'step-' + i">{{ step }}</label>
+    </div>
+  </div>
+
+
+  <div *ngIf="currentStep === 0">
+    <h3>Personal Details</h3>
+    <form [formGroup]="personalForm">
+      <div class="mb-3">
+        <label for="fullName" class="form-label">Full Name</label>
+        <input formControlName="fullName" type="text" class="form-control" id="fullName" placeholder="Enter your full name" />
+      </div>
+      <div class="mb-3">
+        <label for="dob" class="form-label">Date of Birth</label>
+        <input formControlName="dob" type="date" class="form-control" id="dob" />
+      </div>
+      <button type="button" class="btn btn-primary" (click)="nextStep()" [disabled]="!personalForm.valid">Next</button>
+    </form>
+  </div>
+
+  <div *ngIf="currentStep === 1">
+    <h3>Employee Details</h3>
+    <form [formGroup]="employeeForm">
+      <div class="mb-3">
+        <label for="employeeCode" class="form-label">Employee ID</label>
+        <input formControlName="employeeCode" type="text" class="form-control" id="employeeCode" placeholder="Enter employee ID" />
+      </div>
+      <button type="button" class="btn btn-primary" (click)="nextStep()" [disabled]="!employeeForm.valid">Next</button>
+    </form>
+  </div>
+
+
+  <div *ngIf="currentStep === 2">
+    <h3>Job Details</h3>
+    <form [formGroup]="jobForm">
+      <div class="mb-3">
+        <label for="jobTitle" class="form-label">Job Title</label>
+        <input formControlName="jobTitle" type="text" class="form-control" id="jobTitle" placeholder="Enter job title" />
+      </div>
+      <button type="button" class="btn btn-primary" (click)="nextStep()" [disabled]="!jobForm.valid">Next</button>
+    </form>
+  </div>
+
+
+  <div *ngIf="currentStep === 3">
+    <h3>Bank Details</h3>
+    <form [formGroup]="bankForm">
+      <div class="mb-3">
+        <label for="bankName" class="form-label">Bank Name</label>
+        <input formControlName="bankName" type="text" class="form-control" id="bankName" placeholder="Enter bank name" />
+      </div>
+      <button type="button" class="btn btn-primary" (click)="nextStep()" [disabled]="!bankForm.valid">Next</button>
+    </form>
+  </div>
+
+  
+  <div *ngIf="currentStep === 4">
+    <h3>File Upload</h3>
+    <form [formGroup]="fileForm">
+      <div class="mb-3 d-flex align-items-center">
+        <label for="file" class="form-label me-3"></label>
+        <input
+          type="file"
+          class="form-control me-3"
+          id="file"
+          (change)="onFileSelected($event)"
+          style="width: 90%;"
+        />
+        <button
+          type="button"
+          class="btn btn-primary"
+          (click)="submitForm()"
+          [disabled]="!fileForm.valid || fileTooLarge"
+        >
+          Upload
+        </button>
+        <div *ngIf="fileTooLarge" class="text-danger">
+          File size should not exceed 3 MB.
+        </div>
+        <div *ngIf="fileUploaded" class="text-success mt-2">
+          File has been uploaded successfully.
+        </div>
+      </div>
+    </form>
+    <button type="button" class="btn btn-success mt-3" (click)="submitForm()" [disabled]="!allFormsValid">
+      Submit
+    </button>
+  </div>
+</div>

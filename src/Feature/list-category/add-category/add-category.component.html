@@ -1,0 +1,170 @@
+
+  <div class="container">
+    <h2 class="mt-3">Blogpost</h2>
+    <div *ngIf="!isPopupVisible">
+        <button class=" add btn btn-primary ml-1" (click)="openPopup()">Add Blogpost</button>
+    </div>
+    <div class="form-container" *ngIf="isPopupVisible">
+        <span class="close" (click)="closePopup()">&times;</span>
+        <div class="form-content ">
+            <form #BlogForm="ngForm" class="form-horizontal form-label-right" (ngSubmit)="BlogpostSave(BlogForm)">
+                <div *ngIf="successMessageVisible" class="alert alert-success mt-3 success-message">
+                    Form successfully submitted
+                </div>
+
+                
+
+
+
+
+
+                <div class="form-group row mt-3">
+                    <label for="title" class="col-md-3 col-form-label font-weight-bold">Title:</label>
+                    <div class="col-md-6">
+                        <input type="text"
+                               id="title"
+                               name="Title"
+                               [(ngModel)]="blogpostFormData.Title"
+                               required
+                               #title="ngModel">
+                        <div *ngIf="title.invalid && (title.dirty || title.touched)" class="text-danger">
+                            <div *ngIf="title.errors?.['required']">Title is required.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group row mt-3">
+                    <label for="shortDescription" class="col-md-3 col-form-label font-weight-bold">Short Description:</label>
+                    <div class="col-md-6">
+                        <input type="text"
+                               id="shortDescription"
+                               name="ShortDescription"
+                               [(ngModel)]="blogpostFormData.ShortDescription"
+                               required
+                               #shortDescription="ngModel">
+                        <div *ngIf="shortDescription.invalid && (shortDescription.dirty || shortDescription.touched)" class="text-danger">
+                            <div *ngIf="shortDescription.errors?.['required']">Short Description is required.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group row mt-3">
+                    <label for="content" class="col-md-3 col-form-label font-weight-bold">Content:</label>
+                    <div class="col-md-6">
+                        <textarea id="content"
+                                  name="Content"
+                                  [(ngModel)]="blogpostFormData.Content"
+                                  class="form-control"
+                                  required
+                                  #content="ngModel">
+                        </textarea>
+                        <div *ngIf="content.invalid && (content.dirty || content.touched)" class="text-danger">
+                            <div *ngIf="content.errors?.['required']">Content is required.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group row mt-3">
+                    <label for="urlHandle" class="col-md-3 col-form-label font-weight-bold">URL Handle:</label>
+                    <div class="col-md-6">
+                        <input type="text"
+                               id="urlHandle"
+                               name="UrlHandle"
+                               [(ngModel)]="blogpostFormData.UrlHandle"
+                               required
+                               #urlHandle="ngModel">
+                    </div>
+                </div>
+
+                <div class="form-group row mt-3">
+                    <label for="featuredImageUrl" class="col-md-3 col-form-label font-weight-bold">Featured Image URL:</label>
+                    <div class="col-md-6">
+                        <input type="text"
+                               id="featuredImageUrl"
+                               name="FeaturedImageUrl"
+                               [(ngModel)]="blogpostFormData.FeaturedImageUrl"
+                               required
+                               #featuredImageUrl="ngModel">
+                    </div>
+                </div>
+
+                <div class="form-group row mt-3">
+                    <label for="publishedDate" class="col-md-3 col-form-label font-weight-bold">Published Date:</label>
+                    <div class="col-md-6">
+                        <input type="date"
+                               id="publishedDate"
+                               name="PublishedDate"
+                               [(ngModel)]="blogpostFormData.PublishedDate"
+                               required
+                               #publishedDate="ngModel">
+                    </div>
+                </div>
+
+                <div class="form-group row mt-3">
+                    <label for="author" class="col-md-3 col-form-label font-weight-bold">Author:</label>
+                    <div class="col-md-6">
+                        <input type="text"
+                               id="author"
+                               name="Author"
+                               [(ngModel)]="blogpostFormData.Author"
+                               required
+                               #author="ngModel">
+                    </div>
+                </div>
+
+
+
+
+<!-- Ticket Class Selection -->
+<div class="form-group row mt-3">
+    <label for="ticketClass" class="col-md-3 col-form-label font-weight-bold">Select Ticket </label>
+   
+    <div class="col-md-6">
+        <select [(ngModel)]="blogpostFormData.Ticket" name="Ticket" id="ticketClass" required>
+            <option value="">Select a class</option>
+            <option value="Economy">Economy</option>
+            <option value="Standard">Standard</option>
+            <option value="Gold">Gold</option>
+        </select>
+
+        <!-- <div [ngSwitch]="blogpostFormData.Ngswitch" class="mt-2">
+            <div *ngSwitchCase="'Economy'"><p>Your ticket is economy class.</p></div>
+            <div *ngSwitchCase="'Standard'"><p>Your ticket is standard class.</p></div>
+            <div *ngSwitchCase="'Gold'"><p>Your ticket is gold class.</p></div>
+            <div *ngSwitchDefault><p>Select a ticket class.</p></div>
+        </div> -->
+    </div>
+</div>
+
+
+
+
+
+
+
+
+                <div class="form-group row mt-3 align-items-center">
+                    <div class="col-md-3 d-flex align-items-center">
+                        <input class="form-check-input"
+                               type="checkbox"
+                               id="isVisible"
+                               [(ngModel)]="blogpostFormData.IsVisible"
+                               name="IsVisible"
+                               #isVisible="ngModel">
+                        <label for="isVisible" class="form-check-label ml-2 font-weight-bold">Visible</label>
+                    </div>
+                </div>
+
+                <div class="form-group row mt-3">
+                    <div class="col-md-6 d-flex">
+                        <button type="submit" class="btn btn-primary " [disabled]="BlogForm.invalid">Submit</button>
+                        <button type="button" class="btn btn-secondary ml-3" (click)="closePopup()">Back</button>
+                    </div>
+                </div>
+
+
+
+            </form>
+        </div>
+    </div>
+</div>
