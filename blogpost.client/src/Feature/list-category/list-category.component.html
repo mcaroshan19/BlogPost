@@ -26,6 +26,12 @@
         <div *ngIf="successMessageVisible" class="alert alert-success">
           Form successfully submitted!
         </div>
+        <div class="form-group row mt-3">
+          <label for="file" class="col-md-3 col-form-label font-weight-bold">Upload File:</label>
+          <div class="col-md-6">
+            <input type="file" id="file" (change)="onFileSelected($event)" class="form-control form-control-sm" />
+          </div>
+        </div>
         
 
         <div class="form-group row mt-3">
@@ -76,7 +82,7 @@
           type="text"
         
           class="form-control form-control-sm"
-          style="max-width: 200px;"
+          style="max-width: 500px;"
           placeholder="Search..."
           [(ngModel)]="searchQuery"
           #filter

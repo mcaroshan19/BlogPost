@@ -21,9 +21,9 @@ export class PostDataService {
    
     return this.http.post<RequestModel[]>(this.url, category);}
    
-   //Get data API
+  
     public getData(): Observable<ResponseModel[]>{
-      return this.http.get<ResponseModel[]>(this.url);
+      return this.http.get<ResponseModel[]>(this.url );
 
     }
 
@@ -33,7 +33,7 @@ export class PostDataService {
       );
     }
   
-    // Get a specific category by ID
+
     getCategory(id: number): Observable<RequestModel> {
       return this.http.get<RequestModel>(`${this.url}/${id}`);
     }

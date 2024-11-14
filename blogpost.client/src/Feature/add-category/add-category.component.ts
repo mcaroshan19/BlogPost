@@ -1,8 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { BlogpostModel } from '../../Core/Model/Blogpost-Model';
 import { BlogpostService } from '../../Core/Services/blogpost.service';
 
-import { HttpErrorResponse } from '@angular/common/http';
+
 import { NgForm } from '@angular/forms';
 
 import { Block } from '@angular/compiler';
@@ -13,7 +13,7 @@ import { Block } from '@angular/compiler';
 })
 export class AddCategoryComponent {
   successMessageVisible  = false;
-  isPopupVisible  = false; // Renamed to follow naming convention
+  isPopupVisible  = false; 
   blogpostFormData: {
     Title: string;
     ShortDescription: string;
@@ -30,10 +30,10 @@ export class AddCategoryComponent {
     Content: '',
     UrlHandle: '',
     FeaturedImageUrl: '',
-    PublishedDate: new Date(), // Initialize with the current date
+    PublishedDate: new Date(), 
     Author: '',
     Ticket:'',
-    IsVisible: false // Default to false
+    IsVisible: false 
   };
 
   constructor(private blogpostService: BlogpostService) {}
@@ -41,30 +41,30 @@ export class AddCategoryComponent {
   openPopup(blog?: BlogpostModel): void {
     this.isPopupVisible = true;
     if (blog) {
-      // Editing existing blog post
+  
       this.blogpostFormData = {
-        Title: blog.Title || '', // Default to empty string if undefined
+        Title: blog.Title || '', 
         ShortDescription: blog.ShortDescription || '',
         Content: blog.Content || '',
         UrlHandle: blog.UrlHandle || '',
-        FeaturedImageUrl: blog.FeaturedImageUrl || '', // Default to empty if undefined
-        PublishedDate: blog.PublishedDate || new Date(), // Default to current date if undefined
-        Author: blog.Author || '', // Default to empty if undefined
+        FeaturedImageUrl: blog.FeaturedImageUrl || '', 
+        PublishedDate: blog.PublishedDate || new Date(), 
+        Author: blog.Author || '', 
         Ticket:blog.Ticket || '',
-        IsVisible: blog.IsVisible !== undefined ? blog.IsVisible : false // Default to false if undefined
+        IsVisible: blog.IsVisible !== undefined ? blog.IsVisible : false 
       };
     } else {
-      // Adding new blog post
+     
       this.blogpostFormData = {
         Title: '',
         ShortDescription: '',
         Content: '',
         UrlHandle: '',
         FeaturedImageUrl: '',
-        PublishedDate: new Date(), // Default to current date
+        PublishedDate: new Date(), 
         Author: '',
         Ticket:'',
-        IsVisible: false // Default to false
+        IsVisible: false 
       };
     }
   }
@@ -93,7 +93,6 @@ export class AddCategoryComponent {
         console.error('Error occurred:', error);
       });
 
-      // Reset form and formData
       BlogForm.resetForm();
       this.blogpostFormData = {
         Title: '',

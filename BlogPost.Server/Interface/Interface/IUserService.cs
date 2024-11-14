@@ -8,5 +8,7 @@ namespace BlogPost.Server.Interface.Interface
 
         Task<string> RegisterAsync(RegisterModel model);
         Task<string> LoginAsync(UserLogin model);
+
+       
     }
 }

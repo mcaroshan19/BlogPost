@@ -1,13 +1,13 @@
 {
   "Version": 1,
-  "Hash": "chZQvhTAvgrsCfdrxkvgrNBtApLyDsCrZbXPxPrN/oE=",
+  "Hash": "GM7oA0pMR3OEpKHFzotFvIu1jQh/ALnffmvarO3ytZY=",
   "Source": "BlogPost.Server",
   "BasePath": "_content/BlogPost.Server",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [
     {
-      "Identity": "C:\\Users\\hp\\Downloads\\BlogPost-master\\blogpost.client\\blogpost.client.esproj",
+      "Identity": "C:\\Users\\hp\\Downloads\\BlogPost\\blogpost.client\\blogpost.client.esproj",
       "Version": 2,
       "Source": "blogpost.client",
       "GetPublishAssetsTargets": "GetCurrentProjectPublishStaticWebAssetItems",

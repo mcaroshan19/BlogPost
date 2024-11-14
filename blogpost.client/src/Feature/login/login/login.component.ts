@@ -1,9 +1,11 @@
 import { Component ,OnInit} from '@angular/core';
 import { NgForm } from '@angular/forms';
+
 import { Router } from '@angular/router';
 import { loginModel } from '../../../Core/Model/loginModel';
 import { SingupService } from '../../../Core/Services/singup.service';
 import { AuthServiceService } from '../../../Core/Services/auth-service.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -12,10 +14,8 @@ import { AuthServiceService } from '../../../Core/Services/auth-service.service'
 })
 export class LoginComponent implements OnInit {
 
-
-  ngOnInit() {
-    
-  }
+  successMessage: string | null = null;
+ 
 
   UserLogin: loginModel = {
     Email: '',
@@ -25,7 +25,7 @@ export class LoginComponent implements OnInit {
   isUserValid: boolean = false;
   loginError: string | null = null;
 
-  constructor(private userlogin: SingupService, private router: Router, private authService:AuthServiceService) {}
+  constructor(private userlogin: SingupService, private router: Router, private authService:AuthServiceService, private route: ActivatedRoute) {}
 
 
   loginWithFacebook() {
@@ -45,9 +45,9 @@ export class LoginComponent implements OnInit {
             
            
             localStorage.setItem('authToken', res.token);
-            this.authService.setLoginStatus(true); // login status
+            this.authService.setLoginStatus(true); 
             this.router.navigate(['/home']).then(() => {
-              window.location.reload(); // Reload to reflect login status in navbar
+              window.location.reload(); 
             });
             
           }
@@ -67,6 +67,21 @@ export class LoginComponent implements OnInit {
       console.warn('Form is invalid');
       this.loginError = 'Please fill in all fields.';
     }
+  }
+
+  ngOnInit(): void {
+    this.route.queryParams.subscribe(params => {
+      this.successMessage = params['message'] || null;
+
+      if(this.successMessage){
+         setTimeout(()=>
+         {
+          this.successMessage= null;
+         }, 4000
+         );
+
+      }
+    });
   }
  
 

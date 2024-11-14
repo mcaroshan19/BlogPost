@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using System;
+using Microsoft.AspNetCore.Http;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -38,29 +39,29 @@ builder.Services.AddAuthentication(options =>
     {
         ValidateIssuer = true,
         ValidateAudience = true,
+
         ValidateLifetime = true,
         ValidateIssuerSigningKey = true,
         ValidIssuer = builder.Configuration["JwtSettings:Issuer"],
         ValidAudience = builder.Configuration["JwtSettings:Audience"],
         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["JwtSettings:SecretKey"])),
-        ClockSkew = TimeSpan.Zero // Optional: Set clock skew to zero to ensure token expiration is accurate.
+        ClockSkew = TimeSpan.Zero 
     };
 });
 
-// Add Redis caching.
+
 builder.Services.AddStackExchangeRedisCache(options =>
 {
     options.Configuration = builder.Configuration.GetConnectionString("RedisConnection");
     options.InstanceName = "RedisCache_";
 });
 
-// Add scoped dependency injection for repositories.
+
 builder.Services.AddScoped<IcategoryReposetory, CategoryRepository>();
 builder.Services.AddScoped<IBlogPostRepository, BlogpostRepository>();
 builder.Services.AddScoped<IUserService, UserService>();
 
 
-// Configure CORS to allow specific origins (for Angular app).
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAngularApp", builder =>
@@ -71,36 +72,38 @@ builder.Services.AddCors(options =>
     });
 });
 
-// Add configuration as a singleton.
+
 builder.Services.AddSingleton<IConfiguration>(builder.Configuration);
 
 var app = builder.Build();
 
-// Middleware for serving static files.
 app.UseDefaultFiles();
 app.UseStaticFiles();
 
-// Swagger configuration.
+
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
 
-// Enable authentication and authorization.
+
 app.UseAuthentication();
 app.UseAuthorization();
 
-// Enable CORS.
+
 app.UseCors("AllowAngularApp");
 
-// Enable HTTPS redirection.
+
 app.UseHttpsRedirection();
 
-// Map controllers.
+
 app.MapControllers();
 
-// Fallback for Angular routing.
+
+
+
+
 app.MapFallbackToFile("/index.html");
 
 app.Run();

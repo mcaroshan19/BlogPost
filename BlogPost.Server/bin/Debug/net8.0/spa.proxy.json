@@ -3,7 +3,7 @@
 "ServerUrl": "https://localhost:4200",
 "RedirectUrl": "",
 "LaunchCommand": "npm start",
-"WorkingDirectory": "C:\\Users\\hp\\Downloads\\BlogPost-master\\BlogPost.Server\\..\\blogpost.client",
+"WorkingDirectory": "C:\\Users\\hp\\Downloads\\BlogPost\\BlogPost.Server\\..\\blogpost.client",
 "MaxTimeoutInSeconds": "120",
 "KeepRunning": "false"
 }

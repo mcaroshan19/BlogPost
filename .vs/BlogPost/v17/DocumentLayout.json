@@ -1,34 +1,38 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\hp\\Downloads\\BlogPost-master\\",
+  "WorkspaceRootPath": "C:\\Users\\hp\\Downloads\\BlogPost\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E511CEC9-4A30-4DCE-AC8E-C68462DBB088}|BlogPost.Server\\BlogPost.Server.csproj|c:\\users\\hp\\downloads\\blogpost-master\\blogpost.server\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E511CEC9-4A30-4DCE-AC8E-C68462DBB088}|BlogPost.Server\\BlogPost.Server.csproj|solutionrelative:blogpost.server\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\hp\\Downloads\\BlogPost\\BlogPost.Server\\Migrations\\20241109221304_Intial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:BlogPost.Server\\Migrations\\20241109221304_Intial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E511CEC9-4A30-4DCE-AC8E-C68462DBB088}|BlogPost.Server\\BlogPost.Server.csproj|c:\\users\\hp\\downloads\\blogpost-master\\blogpost.server\\model\\domain\\registermodel .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E511CEC9-4A30-4DCE-AC8E-C68462DBB088}|BlogPost.Server\\BlogPost.Server.csproj|solutionrelative:blogpost.server\\model\\domain\\registermodel .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E511CEC9-4A30-4DCE-AC8E-C68462DBB088}|BlogPost.Server\\BlogPost.Server.csproj|c:\\users\\hp\\downloads\\blogpost\\blogpost.server\\model\\domain\\userprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E511CEC9-4A30-4DCE-AC8E-C68462DBB088}|BlogPost.Server\\BlogPost.Server.csproj|solutionrelative:blogpost.server\\model\\domain\\userprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E511CEC9-4A30-4DCE-AC8E-C68462DBB088}|BlogPost.Server\\BlogPost.Server.csproj|c:\\users\\hp\\downloads\\blogpost-master\\blogpost.server\\interface\\implimentaion\\userservice .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E511CEC9-4A30-4DCE-AC8E-C68462DBB088}|BlogPost.Server\\BlogPost.Server.csproj|solutionrelative:blogpost.server\\interface\\implimentaion\\userservice .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E511CEC9-4A30-4DCE-AC8E-C68462DBB088}|BlogPost.Server\\BlogPost.Server.csproj|c:\\users\\hp\\downloads\\blogpost\\blogpost.server\\controllers\\navigationformcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E511CEC9-4A30-4DCE-AC8E-C68462DBB088}|BlogPost.Server\\BlogPost.Server.csproj|solutionrelative:blogpost.server\\controllers\\navigationformcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E511CEC9-4A30-4DCE-AC8E-C68462DBB088}|BlogPost.Server\\BlogPost.Server.csproj|c:\\users\\hp\\downloads\\blogpost-master\\blogpost.server\\database\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E511CEC9-4A30-4DCE-AC8E-C68462DBB088}|BlogPost.Server\\BlogPost.Server.csproj|solutionrelative:blogpost.server\\database\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E511CEC9-4A30-4DCE-AC8E-C68462DBB088}|BlogPost.Server\\BlogPost.Server.csproj|c:\\users\\hp\\downloads\\blogpost\\blogpost.server\\model\\domain\\userr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E511CEC9-4A30-4DCE-AC8E-C68462DBB088}|BlogPost.Server\\BlogPost.Server.csproj|solutionrelative:blogpost.server\\model\\domain\\userr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E511CEC9-4A30-4DCE-AC8E-C68462DBB088}|BlogPost.Server\\BlogPost.Server.csproj|c:\\users\\hp\\downloads\\blogpost-master\\blogpost.server\\model\\domain\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E511CEC9-4A30-4DCE-AC8E-C68462DBB088}|BlogPost.Server\\BlogPost.Server.csproj|c:\\users\\hp\\downloads\\blogpost\\blogpost.server\\model\\domain\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E511CEC9-4A30-4DCE-AC8E-C68462DBB088}|BlogPost.Server\\BlogPost.Server.csproj|solutionrelative:blogpost.server\\model\\domain\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3EBBB1A1-932D-4E2B-B07C-C94238B032A9}|blogpost.client\\blogpost.client.esproj|c:\\users\\hp\\downloads\\blogpost-master\\blogpost.client\\src\\app\\app-routing.module.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{3EBBB1A1-932D-4E2B-B07C-C94238B032A9}|blogpost.client\\blogpost.client.esproj|solutionrelative:blogpost.client\\src\\app\\app-routing.module.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+      "AbsoluteMoniker": "D:0:0:{E511CEC9-4A30-4DCE-AC8E-C68462DBB088}|BlogPost.Server\\BlogPost.Server.csproj|c:\\users\\hp\\downloads\\blogpost\\blogpost.server\\database\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E511CEC9-4A30-4DCE-AC8E-C68462DBB088}|BlogPost.Server\\BlogPost.Server.csproj|solutionrelative:blogpost.server\\database\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3EBBB1A1-932D-4E2B-B07C-C94238B032A9}|blogpost.client\\blogpost.client.esproj|c:\\users\\hp\\downloads\\blogpost-master\\blogpost.client\\src\\core\\my-component\\my-component.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3EBBB1A1-932D-4E2B-B07C-C94238B032A9}|blogpost.client\\blogpost.client.esproj|solutionrelative:blogpost.client\\src\\core\\my-component\\my-component.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{E511CEC9-4A30-4DCE-AC8E-C68462DBB088}|BlogPost.Server\\BlogPost.Server.csproj|c:\\users\\hp\\downloads\\blogpost\\blogpost.server\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E511CEC9-4A30-4DCE-AC8E-C68462DBB088}|BlogPost.Server\\BlogPost.Server.csproj|solutionrelative:blogpost.server\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E511CEC9-4A30-4DCE-AC8E-C68462DBB088}|BlogPost.Server\\BlogPost.Server.csproj|c:\\users\\hp\\downloads\\blogpost\\blogpost.server\\interface\\implimentaion\\userservice .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E511CEC9-4A30-4DCE-AC8E-C68462DBB088}|BlogPost.Server\\BlogPost.Server.csproj|solutionrelative:blogpost.server\\interface\\implimentaion\\userservice .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,98 +42,104 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\hp\\Downloads\\BlogPost-master\\BlogPost.Server\\Database\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "BlogPost.Server\\Database\\ApplicationDbContext.cs",
-              "ToolTip": "C:\\Users\\hp\\Downloads\\BlogPost-master\\BlogPost.Server\\Database\\ApplicationDbContext.cs",
-              "RelativeToolTip": "BlogPost.Server\\Database\\ApplicationDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAIAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "20241109221304_Intial.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\Downloads\\BlogPost\\BlogPost.Server\\Migrations\\20241109221304_Intial.cs",
+              "RelativeDocumentMoniker": "BlogPost.Server\\Migrations\\20241109221304_Intial.cs",
+              "ToolTip": "C:\\Users\\hp\\Downloads\\BlogPost\\BlogPost.Server\\Migrations\\20241109221304_Intial.cs",
+              "RelativeToolTip": "BlogPost.Server\\Migrations\\20241109221304_Intial.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-16T13:05:52.284Z",
+              "WhenOpened": "2024-11-09T22:13:04.843Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
               "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\hp\\Downloads\\BlogPost-master\\BlogPost.Server\\Model\\Domain\\User.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\Downloads\\BlogPost\\BlogPost.Server\\Model\\Domain\\User.cs",
               "RelativeDocumentMoniker": "BlogPost.Server\\Model\\Domain\\User.cs",
-              "ToolTip": "C:\\Users\\hp\\Downloads\\BlogPost-master\\BlogPost.Server\\Model\\Domain\\User.cs",
+              "ToolTip": "C:\\Users\\hp\\Downloads\\BlogPost\\BlogPost.Server\\Model\\Domain\\User.cs",
               "RelativeToolTip": "BlogPost.Server\\Model\\Domain\\User.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABEAAAAGAAAAAAAAAA==",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-16T12:54:53.204Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "RegisterModel .cs",
-              "DocumentMoniker": "C:\\Users\\hp\\Downloads\\BlogPost-master\\BlogPost.Server\\Model\\Domain\\RegisterModel .cs",
-              "RelativeDocumentMoniker": "BlogPost.Server\\Model\\Domain\\RegisterModel .cs",
-              "ToolTip": "C:\\Users\\hp\\Downloads\\BlogPost-master\\BlogPost.Server\\Model\\Domain\\RegisterModel .cs",
-              "RelativeToolTip": "BlogPost.Server\\Model\\Domain\\RegisterModel .cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwA0AAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-16T11:25:51.245Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "UserService .cs",
-              "DocumentMoniker": "C:\\Users\\hp\\Downloads\\BlogPost-master\\BlogPost.Server\\Interface\\Implimentaion\\UserService .cs",
-              "RelativeDocumentMoniker": "BlogPost.Server\\Interface\\Implimentaion\\UserService .cs",
-              "ToolTip": "C:\\Users\\hp\\Downloads\\BlogPost-master\\BlogPost.Server\\Interface\\Implimentaion\\UserService .cs",
-              "RelativeToolTip": "BlogPost.Server\\Interface\\Implimentaion\\UserService .cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAuwBsAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-16T11:25:20.909Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UserController.cs",
-              "DocumentMoniker": "C:\\Users\\hp\\Downloads\\BlogPost-master\\BlogPost.Server\\Controllers\\UserController.cs",
-              "RelativeDocumentMoniker": "BlogPost.Server\\Controllers\\UserController.cs",
-              "ToolTip": "C:\\Users\\hp\\Downloads\\BlogPost-master\\BlogPost.Server\\Controllers\\UserController.cs",
-              "RelativeToolTip": "BlogPost.Server\\Controllers\\UserController.cs",
-              "ViewState": "AgIAADQAAAAAAAAAAAAAADgAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-15T21:33:43.195Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-09T21:37:12.158Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "app-routing.module.ts",
-              "DocumentMoniker": "C:\\Users\\hp\\Downloads\\BlogPost-master\\blogpost.client\\src\\app\\app-routing.module.ts",
-              "RelativeDocumentMoniker": "blogpost.client\\src\\app\\app-routing.module.ts",
-              "ToolTip": "C:\\Users\\hp\\Downloads\\BlogPost-master\\blogpost.client\\src\\app\\app-routing.module.ts",
-              "RelativeToolTip": "blogpost.client\\src\\app\\app-routing.module.ts",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2024-10-15T21:30:13.963Z",
-              "EditorCaption": ""
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\Downloads\\BlogPost\\BlogPost.Server\\Database\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "BlogPost.Server\\Database\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\hp\\Downloads\\BlogPost\\BlogPost.Server\\Database\\ApplicationDbContext.cs",
+              "RelativeToolTip": "BlogPost.Server\\Database\\ApplicationDbContext.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAAAAADsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-08T20:28:43.853Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UserProfile.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\Downloads\\BlogPost\\BlogPost.Server\\Model\\Domain\\UserProfile.cs",
+              "RelativeDocumentMoniker": "BlogPost.Server\\Model\\Domain\\UserProfile.cs",
+              "ToolTip": "C:\\Users\\hp\\Downloads\\BlogPost\\BlogPost.Server\\Model\\Domain\\UserProfile.cs",
+              "RelativeToolTip": "BlogPost.Server\\Model\\Domain\\UserProfile.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAAACsAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-07T21:30:32.49Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Userr.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\Downloads\\BlogPost\\BlogPost.Server\\Model\\Domain\\Userr.cs",
+              "RelativeDocumentMoniker": "BlogPost.Server\\Model\\Domain\\Userr.cs",
+              "ToolTip": "C:\\Users\\hp\\Downloads\\BlogPost\\BlogPost.Server\\Model\\Domain\\Userr.cs",
+              "RelativeToolTip": "BlogPost.Server\\Model\\Domain\\Userr.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAoAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-07T21:26:28.511Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "NavigationFormController.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\Downloads\\BlogPost\\BlogPost.Server\\Controllers\\NavigationFormController.cs",
+              "RelativeDocumentMoniker": "BlogPost.Server\\Controllers\\NavigationFormController.cs",
+              "ToolTip": "C:\\Users\\hp\\Downloads\\BlogPost\\BlogPost.Server\\Controllers\\NavigationFormController.cs",
+              "RelativeToolTip": "BlogPost.Server\\Controllers\\NavigationFormController.cs",
+              "ViewState": "AgIAAHcAAAAAAAAAAAAAAIgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-07T21:10:59.516Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "my-component.component.html",
-              "DocumentMoniker": "C:\\Users\\hp\\Downloads\\BlogPost-master\\blogpost.client\\src\\Core\\my-component\\my-component.component.html",
-              "RelativeDocumentMoniker": "blogpost.client\\src\\Core\\my-component\\my-component.component.html",
-              "ToolTip": "C:\\Users\\hp\\Downloads\\BlogPost-master\\blogpost.client\\src\\Core\\my-component\\my-component.component.html",
-              "RelativeToolTip": "blogpost.client\\src\\Core\\my-component\\my-component.component.html",
-              "ViewState": "AgIAABQAAAAAAAAAAAAAAAgAAABIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-10-15T21:26:50.799Z",
-              "EditorCaption": ""
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\Downloads\\BlogPost\\BlogPost.Server\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "BlogPost.Server\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\hp\\Downloads\\BlogPost\\BlogPost.Server\\Controllers\\UserController.cs",
+              "RelativeToolTip": "BlogPost.Server\\Controllers\\UserController.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAkwDkAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-07T21:10:59.541Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UserService .cs",
+              "DocumentMoniker": "C:\\Users\\hp\\Downloads\\BlogPost\\BlogPost.Server\\Interface\\Implimentaion\\UserService .cs",
+              "RelativeDocumentMoniker": "BlogPost.Server\\Interface\\Implimentaion\\UserService .cs",
+              "ToolTip": "C:\\Users\\hp\\Downloads\\BlogPost\\BlogPost.Server\\Interface\\Implimentaion\\UserService .cs",
+              "RelativeToolTip": "BlogPost.Server\\Interface\\Implimentaion\\UserService .cs",
+              "ViewState": "AgIAAI4AAAAAAAAAAAAcwJwAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-07T21:10:59.565Z"
             }
           ]
         }

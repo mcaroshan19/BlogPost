@@ -2,6 +2,7 @@
 using BlogPost.Server.Interface.Interface;
 using BlogPost.Server.Model.Domain;
 using BlogPost.Server.Model.DTO;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
@@ -21,6 +22,7 @@ namespace BlogPost.Server.Controllers
         }
 
         [HttpPost]
+       
         public async  Task<IActionResult> CreateBlogPost([FromBody] CreateBlogpostsRequestDto request)
         {
             //Convert DTO to Domain model

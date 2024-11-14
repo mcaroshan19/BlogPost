@@ -12,6 +12,7 @@ namespace BlogPost.Server.Model.Domain
         public string Mobile { get; set; }
         public string Gender { get; set; }
         public string Pwd { get; set; }
-       
+     
+
     }
 }

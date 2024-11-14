@@ -11,8 +11,11 @@ import { HomeComponent } from '../Core/home/home.component';
 import { EditComponent } from '../Feature/edit/edit.component';
 import { FilterPipe } from '../Core/filter.pipe';
 import { SingupComponent } from '../Feature/singup/singup.component';
+import { HighlightDirective } from '../Core/highlight.directive';
+import { ReactiveFormsModule } from '@angular/forms'; 
 
 import { LoginComponent } from '../Feature/login/login/login.component';
+import { UserComponent } from './user/user.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,12 +26,16 @@ import { LoginComponent } from '../Feature/login/login/login.component';
     EditComponent,
     FilterPipe,
     SingupComponent,
-    LoginComponent
+    LoginComponent,
+    HighlightDirective,
+    UserComponent
+
   ],
   imports: [
     BrowserModule, HttpClientModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule 
   ],
   providers: [],
   bootstrap: [AppComponent]

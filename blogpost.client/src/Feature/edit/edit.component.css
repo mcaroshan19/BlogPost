@@ -1,0 +1,16 @@
+h2 {
+    color: #007bff;
+  }
+  
+  ul {
+    padding-left: 20px;
+  }
+  
+  ul li {
+    list-style-type: square;
+  }
+  
+  hr {
+    border-top: 1px solid #ccc;
+  }
+  

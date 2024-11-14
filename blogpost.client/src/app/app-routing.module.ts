@@ -9,6 +9,7 @@ import { EditComponent } from '../Feature/edit/edit.component';
 import { SingupComponent } from '../Feature/singup/singup.component';
 import { LoginComponent } from '../Feature/login/login/login.component';
 import { authGuard } from '../Core/Authgard/auth.guard';
+import { UserComponent } from './user/user.component';
 
 
 const routes: Routes = [
@@ -47,7 +48,11 @@ const routes: Routes = [
     path:'login',
     component:LoginComponent
   },
-  { path: '', redirectTo: '/home', pathMatch: 'full' }
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  {
+    path:'app-user',
+    component: UserComponent
+  }
   
 
 ];

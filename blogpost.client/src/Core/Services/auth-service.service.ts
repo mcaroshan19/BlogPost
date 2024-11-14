@@ -25,10 +25,10 @@ export class AuthServiceService {
     }
   }
 
-  logout(): void {
-    localStorage.removeItem('authToken');
-    this.setLoginStatus(false);
-  }
+  // logout(): void {
+  //   localStorage.removeItem('authToken');
+  //   this.setLoginStatus(false);
+  // }
 
 
 }

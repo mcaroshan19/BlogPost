@@ -15,7 +15,7 @@ import * as XLSX from 'xlsx';
 export class ListCategoryComponent implements OnInit{
 
 
-
+  selectedFile: File | null = null;
 
 userData: ResponseModel[] = [];
 searchQuery = '';
@@ -26,12 +26,16 @@ categoryFormData: { name: string; urlHandle: string } = { name: '', urlHandle: '
 
 constructor(private postDataService: PostDataService) {}
 
+onFileSelected(event : any): void{
+  this.selectedFile= event.target.files[0];
+}
+
 
 ngOnInit(): void {
   this.GetBlogpostData();
 }
 
-// Fetch data from the API
+
 GetBlogpostData(): void {
   this.postDataService.getData().subscribe(data => {
     console.log('Data received from API:', data);
@@ -49,10 +53,10 @@ openPopup(category?: ResponseModel): void {
   this.editingCategoryId = category?.id ?? null;
 
   if (category) {
-    // Editing existing category
+   
     this.categoryFormData = { name: category.name, urlHandle: category.urlHandle };
   } else {
-    // Adding new category
+   
     this.categoryFormData = { name: '', urlHandle: '' };
   }
 }
@@ -65,27 +69,32 @@ closePopup(): void {
 
 onFormSubmit(usersForm: NgForm): void {
   if (usersForm.valid) {
+    
+
+
     if (this.editingCategoryId !== null) {
-      // Editing existing category
+      
       this.postDataService.updateCategory(this.editingCategoryId, usersForm.value).subscribe(result => {
         console.warn("Success:", result);
         this.successMessageVisible = true;
         setTimeout(() => {
           this.successMessageVisible = false;
-          this.GetBlogpostData(); // Refresh the list after update
+          this.GetBlogpostData(); 
           this.closePopup();
         }, 3000);
       }, error => {
         console.error('Error occurred:', error);
       });
     } else {
-      // Adding new category
+   
+
+
       this.postDataService.addCategory(usersForm.value).subscribe(result => {
         console.warn("Success:", result);
         this.successMessageVisible = true;
         setTimeout(() => {
           this.successMessageVisible = false;
-          this.GetBlogpostData(); // Refresh the list after adding
+          this.GetBlogpostData(); 
           this.closePopup();
         }, 3000);
       }, error => {
@@ -94,18 +103,19 @@ onFormSubmit(usersForm: NgForm): void {
     }
 
     usersForm.reset();
+    this.selectedFile = null; 
   }
 }
- // Export data to Excel
+
  exportToExcel(): void {
-  // Convert data to a worksheet
+
   const ws: XLSX.WorkSheet = XLSX.utils.json_to_sheet(this.userData);
 
-  // Create a new workbook and append the worksheet
+ 
   const wb: XLSX.WorkBook = XLSX.utils.book_new();
   XLSX.utils.book_append_sheet(wb, ws, 'Categories');
 
-  // Generate buffer and save file
+  
   XLSX.writeFile(wb, 'categories.xlsx');
 }
 deleteCategory(id: number): void {

@@ -1,6 +1,6 @@
 import { Component ,OnInit} from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
-import { AuthServiceService } from '../Services/auth-service.service';
+
 
 @Component({
   selector: 'app-my-component',
@@ -14,7 +14,7 @@ export class MyComponentComponent implements OnInit{
 isUserValid: boolean = false;  
 logoutMessage: string = '';    
 
-constructor(private router: Router, private authService: AuthServiceService) {
+constructor(private router: Router) {
 
   this.router.events.subscribe((event) => {
     if (event instanceof NavigationEnd) {

@@ -7,6 +7,7 @@ using BlogPost.Server.Interface.Interface;
 using BlogPost.Server.Model.Domain;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using System;
@@ -32,7 +33,7 @@ namespace BlogPost.Server.Controllers
             _userService = userService;
         }
 
-    
+
         [HttpPost("register")]
         public async Task<IActionResult> Register([FromBody] RegisterModel model)
         {
@@ -56,7 +57,7 @@ namespace BlogPost.Server.Controllers
             }
         }
 
- 
+
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] UserLogin model)
         {
@@ -79,5 +80,30 @@ namespace BlogPost.Server.Controllers
                 return StatusCode(500, "An internal server error occurred.");
             }
         }
+
+
+
+
+
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -17,10 +17,33 @@ namespace BlogPost.Server.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "8.0.8")
+                .HasAnnotation("ProductVersion", "8.0.10")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
+
+            modelBuilder.Entity("BlogPost.Server.Model.Domain.BankDetails", b =>
+                {
+                    b.Property<int>("BankId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("BankId"));
+
+                    b.Property<string>("BankName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("BankId");
+
+                    b.HasIndex("UserId")
+                        .IsUnique();
+
+                    b.ToTable("BankDetailsExtended");
+                });
 
             modelBuilder.Entity("BlogPost.Server.Model.Domain.Blogposts", b =>
                 {
@@ -103,6 +126,52 @@ namespace BlogPost.Server.Migrations
                     b.ToTable("Employees");
                 });
 
+            modelBuilder.Entity("BlogPost.Server.Model.Domain.Employeee", b =>
+                {
+                    b.Property<int>("EmployeeId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("EmployeeId"));
+
+                    b.Property<string>("EmployeeCode")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("EmployeeId");
+
+                    b.HasIndex("UserId")
+                        .IsUnique();
+
+                    b.ToTable("EmployeesExtended");
+                });
+
+            modelBuilder.Entity("BlogPost.Server.Model.Domain.JobDetails", b =>
+                {
+                    b.Property<int>("JobId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("JobId"));
+
+                    b.Property<string>("JobTitle")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("JobId");
+
+                    b.HasIndex("UserId")
+                        .IsUnique();
+
+                    b.ToTable("JobDetailsExtended");
+                });
+
             modelBuilder.Entity("BlogPost.Server.Model.Domain.Singup", b =>
                 {
                     b.Property<int>("SingupID")
@@ -147,7 +216,7 @@ namespace BlogPost.Server.Migrations
                     b.ToTable("Students");
                 });
 
-            modelBuilder.Entity("BlogPost.Server.Model.Domain.User", b =>
+            modelBuilder.Entity("BlogPost.Server.Model.Domain.UserProfile", b =>
                 {
                     b.Property<int>("UserID")
                         .ValueGeneratedOnAdd()
@@ -167,9 +236,6 @@ namespace BlogPost.Server.Migrations
                     b.Property<string>("LastName")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("Membersince")
-                        .HasColumnType("datetime2");
-
                     b.Property<string>("Mobile")
                         .HasColumnType("nvarchar(max)");
 
@@ -178,7 +244,72 @@ namespace BlogPost.Server.Migrations
 
                     b.HasKey("UserID");
 
-                    b.ToTable("Newreg");
+                    b.ToTable("UserProfiles");
+                });
+
+            modelBuilder.Entity("BlogPost.Server.Model.Domain.Userr", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("Dob")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("FilePath")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FullName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Userss");
+                });
+
+            modelBuilder.Entity("BlogPost.Server.Model.Domain.BankDetails", b =>
+                {
+                    b.HasOne("BlogPost.Server.Model.Domain.Userr", "User")
+                        .WithOne("BankDetails")
+                        .HasForeignKey("BlogPost.Server.Model.Domain.BankDetails", "UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("BlogPost.Server.Model.Domain.Employeee", b =>
+                {
+                    b.HasOne("BlogPost.Server.Model.Domain.Userr", "User")
+                        .WithOne("Employeee")
+                        .HasForeignKey("BlogPost.Server.Model.Domain.Employeee", "UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("BlogPost.Server.Model.Domain.JobDetails", b =>
+                {
+                    b.HasOne("BlogPost.Server.Model.Domain.Userr", "User")
+                        .WithOne("JobDetails")
+                        .HasForeignKey("BlogPost.Server.Model.Domain.JobDetails", "UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("BlogPost.Server.Model.Domain.Userr", b =>
+                {
+                    b.Navigation("BankDetails");
+
+                    b.Navigation("Employeee");
+
+                    b.Navigation("JobDetails");
                 });
 #pragma warning restore 612, 618
         }

@@ -2,7 +2,9 @@
 
    <nav class="navbar navbar-expand-lg bg-body-tertiary" *ngIf="showNavbar" >
     <div class="container">
-      <a class="navbar-brand" href="#">Mypost_R</a>
+      <a class="navbar-brand" href="http://localhost:4200/home">
+        <img src="assets\Images\logo.png" alt="Mypost_R Logo" width="100" height="40" class="d-inline-block align-text-top">
+      </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -22,6 +24,8 @@
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" routerLink="/List">Categories</a></li>
               <li><a class="dropdown-item" routerLink="/add-category">Blogpost</a></li>
+              <li><a class="dropdown-item" routerLink="/app-user">Navigation form</a></li>
+              <li><a class="dropdown-item" routerLink="/edit">Resume</a></li>
             </ul>
           </li>
         </ul>
